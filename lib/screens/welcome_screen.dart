@@ -28,7 +28,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   height: 20,
                 ),
                 const Text(
-                  "Let's get started",
+                  "Let's Get Started",
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -49,7 +49,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   height: 50,
                   child: CustomButton(
                     onPressed: () {},
-                    text: "Get started",
+                    text: "Get Started",
                   ),
                 )
               ],
