@@ -41,14 +41,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   width: 200,
                   height: 200,
                   padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color.fromARGB(255, 199, 246, 236)),
                   child: Image.asset(
                     'assets/register.png',
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 const Text(
@@ -68,11 +68,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  cursorColor: Color.fromARGB(255, 102, 200, 197),
+                  cursorColor: const Color.fromARGB(255, 102, 200, 197),
                   controller: phoneController,
                   style: const TextStyle(
                       fontSize: 18, fontWeight: FontWeight.bold),
@@ -100,8 +100,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         onTap: () {
                           showCountryPicker(
                               context: context,
-                              countryListTheme:
-                                  CountryListThemeData(bottomSheetHeight: 600),
+                              countryListTheme: const CountryListThemeData(
+                                  bottomSheetHeight: 600),
                               onSelect: (value) {
                                 setState(() {
                                   selectedCountry = value;
@@ -110,7 +110,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         },
                         child: Text(
                           "${selectedCountry.flagEmoji} + ${selectedCountry.phoneCode}",
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
