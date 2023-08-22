@@ -146,7 +146,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   height: 50,
                   child: CustomButton(
                     text: "Login",
-                    onPressed: () {},
+                    onPressed: () => sendPhoneNumber(),
                   ),
                 )
               ],
