@@ -114,7 +114,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           "${selectedCountry.flagEmoji} + ${selectedCountry.phoneCode}",
                           style: const TextStyle(
                             fontSize: 18,
-                            color: Colors.black,
+                            color: Color.fromARGB(255, 24, 24, 24),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
