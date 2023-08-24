@@ -1,4 +1,5 @@
 import 'package:firebase_phone_auth/provider/auth_provider.dart';
+import 'package:firebase_phone_auth/screens/home_screen.dart';
 import 'package:firebase_phone_auth/screens/user_information_screen.dart';
 import 'package:firebase_phone_auth/utils/utils.dart';
 import 'package:firebase_phone_auth/widgets/custom_button.dart';
@@ -157,6 +158,18 @@ class _OtpScreenState extends State<OtpScreen> {
           (value) async {
             if (value == true) {
               //user exists in our app
+              ap.getDataFromFirestore().then(
+                    (value) => ap.saveUserDataToSP().then(
+                          (value) => ap.setSignIn().then(
+                                (value) => Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (builder) => const HomeScreen(),
+                                    ),
+                                    (route) => false),
+                              ),
+                        ),
+                  );
             } else {
               //new user
               Navigator.pushAndRemoveUntil(
